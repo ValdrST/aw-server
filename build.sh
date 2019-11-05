@@ -5,4 +5,4 @@
 
 echo "Please make sure that ./aw_server/static contains the build from aw-webui"
 
-pyinstaller aw-server.spec
+pyinstaller aw-server.spec -F
