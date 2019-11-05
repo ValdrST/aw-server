@@ -9,11 +9,11 @@ from datetime import datetime, timedelta
 
 from aw_core import schema
 from aw_core.models import Event
+from aw_query.exceptions import QueryException
 
 from . import logger
 from .api import ServerAPI
 from .exceptions import BadRequest, Unauthorized
-from aw_analysis.query2_error import QueryException
 
 
 # SECURITY
@@ -64,6 +64,7 @@ info = api.model('Info', {
     'hostname': fields.String(),
     'version': fields.String(),
     'testing': fields.Boolean(),
+    'device_id': fields.String(),
 })
 
 create_bucket = api.model('CreateBucket', {
@@ -152,7 +153,7 @@ class EventsResource(Resource):
     @copy_doc(ServerAPI.get_events)
     def get(self, bucket_id):
         args = request.args
-        limit = int(args["limit"]) if "limit" in args else 100
+        limit = int(args["limit"]) if "limit" in args else -1
         start = iso8601.parse_date(args["start"]) if "start" in args else None
         end = iso8601.parse_date(args["end"]) if "end" in args else None
 
