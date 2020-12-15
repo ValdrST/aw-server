@@ -1,17 +1,19 @@
 aw-server
 ============
 
-[![Build Status](https://travis-ci.org/ActivityWatch/aw-server.svg?branch=master)](https://travis-ci.org/ActivityWatch/aw-server)
+[![Build Status](https://github.com/ActivityWatch/aw-server/workflows/Build/badge.svg?branch=master)](https://github.com/ActivityWatch/aw-server/actions?query=workflow%3ABuild+branch%3Amaster)
+[![Coverage Status](https://codecov.io/gh/ActivityWatch/aw-server/branch/master/graph/badge.svg)](https://codecov.io/gh/ActivityWatch/aw-server)
+
 
 ActivityWatch server, for secure storage and retrieval of all your Quantified Self data.
 
 
-## Install
+## Build and Install
 
-Install program and dependencies:
+To install program and dependencies, Poetry is required.
 
 ```bash
-sudo python3 setup.py install 
+make build
 ```
 
 The `aw-server` binary should now be available to you in your PATH (if it is set correctly).
