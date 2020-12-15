@@ -3,11 +3,11 @@ import logging
 from aw_datastore import get_storage_methods
 from aw_core.log import setup_logging
 
-from .server import _start
+from .server import _start, create_app
 from .config import config
 
 logger = logging.getLogger(__name__)
-
+application = create_app()
 
 def main():
     """Called from the executable and __main__.py"""

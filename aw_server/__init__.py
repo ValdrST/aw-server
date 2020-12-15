@@ -10,4 +10,5 @@ from .server import create_app
 from . import api
 from . import rest
 
-from .main import main
+from .main import main, application
+from .wsgi import wsgi

@@ -7,6 +7,7 @@ license = "MPL-2.0"
 
 [tool.poetry.scripts]
 aw-server = "aw_server:main"
+aw-serverWSGI = "aw_server:wsgi"
 
 [tool.poetry.dependencies]
 python = "^3.6"
