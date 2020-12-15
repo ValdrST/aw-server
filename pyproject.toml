@@ -10,8 +10,8 @@ aw-server = "aw_server:main"
 
 [tool.poetry.dependencies]
 python = "^3.6"
-aw-core = {git = "https://github.com/ActivityWatch/aw-core.git"}
-aw-client = {git = "https://github.com/ActivityWatch/aw-client.git"}
+aw-core = {git = "https://github.com/ValdrST/aw-core.git"}
+aw-client = {git = "https://github.com/ValdrST/aw-client.git"}
 appdirs = "^1.4.3"
 flask = "^1.1.1"
 flask-restx = "^0.1.1"
